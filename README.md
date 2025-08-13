@@ -4,7 +4,7 @@
 
 ## The Experiment
 
-Over the last week or so, as an experiment, I took 4mb of text data from a selection of prose that I thought was interesting.
+Over the last week or so, as an experiment, I took 4mb of text data from a selection of prose that I thought was interesting. I'm not sure if the results are or not.
 
 I got Claude to write a script that looked for the words within that 4mb of text data which appeared, most often, at Fibonacci intervals to each individual word, both forwards and backwards in the text.
 
@@ -88,7 +88,7 @@ But, from what I understand about LLMs, more input data will always mean more bl
 
 The intervals and their weighting is really important to my writing work, which is how I make a living, so I apologise for not just publishing the code. That feels shitty of me. I don't want it to look like a black box filled with snake oil. It's just that for a writer, you don't really have much more than your voice.
 
-I will, though, happily share it with anyone genuinely interested, in a reasonable way - hit me up. If this is worth pursuing, I would love to do that. But I'm very much at the point where it's beyond me, now.
+I will, though, happily share it with anyone genuinely interested, in a reasonable way - hit me up. If this is worth pursuing, I would love to do that. Because I'm very much at the point where it's beyond me, now.
 
 Email is in my Twitter - [@gabriel666smith](https://twitter.com/gabriel666smith).
 
