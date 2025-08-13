@@ -88,7 +88,9 @@ But, from what I understand about LLMs, more input data will always mean more bl
 
 The intervals and their weighting is really important to my writing work, which is how I make a living, so I apologise for not just publishing the code. That feels shitty of me. I don't want it to look like a black box filled with snake oil. It's just that for a writer, you don't really have much more than your voice.
 
-I will, though, happily share it with anyone genuinely interested, in a reasonable way - hit me up. Email is in my Twitter - [@gabriel666smith](https://twitter.com/gabriel666smith).
+I will, though, happily share it with anyone genuinely interested, in a reasonable way - hit me up. If this is worth pursuing, I would love to do that. But I'm very much at the point where it's beyond me, now.
+
+Email is in my Twitter - [@gabriel666smith](https://twitter.com/gabriel666smith).
 
 ---
 
