@@ -66,6 +66,8 @@ After some slightly negative forum feedback, I thought it'd be useful to use the
 
 **Output:** `"thank you for the more substantive but negative feedback powerfully pretentious and unserious"`
 
+Hopefully the additional examples of its generative coherence are helpful.
+
 ## Adding Punctuation
 
 Because of the weird coherence of the generations, I wanted to see if I could add punctuation to the output. Because if it could have punctuation, then it could start a new sentence by itself, maybe.
