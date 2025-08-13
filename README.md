@@ -1,6 +1,6 @@
 # FMLLM
 
-**FML LM**: or, FML, this kind of looks like a Fibonacci Language Model. Can anyone help me work out if it is meaningful? 
+**FML LM**: or, FML, this sort of looks like a Fibonacci Language Model. Can anyone help me work out if it is meaningful? 
 
 ## The Experiment
 
