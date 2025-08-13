@@ -50,9 +50,25 @@ I also added a new process, where each generated word - if you ask for more than
 
 This is cool, because in the training data, there isn't anything about french toast. So it's satisfying, I think, that it used 'piney' for maple syrup, and 'connubial' for loves, and 'produit', which is the French word for product. But I don't know - people see what they want to see. And the sentencetransformers model is obviously looking for semantic coherence from the candidates!
 
+### Further Generation Examples
+
+After some slightly negative forum feedback, I thought it'd be useful to use the comments as prompts to provide some further examples of the model's text completion, such as it is:
+
+**Input:** `"the text you posted is nonsense"`
+
+**Output:** `"the text you posted is nonsense about sentences that syntactically are not lexical"`
+
+**Input:** `"this is not an acceptable"`
+
+**Output:** `"this is not an acceptable creation disingenuous pseudophilosophical ploy"`
+
+**Input:** `"thank you for the more substantive but negative feedback"`
+
+**Output:** `"thank you for the more substantive but negative feedback powerfully pretentious and unserious"`
+
 ## Adding Punctuation
 
-But, because of the weird coherence, I wanted to see if I could add punctuation to the output. Because if it could have punctuation, then it could start a new sentence by itself, maybe.
+Because of the weird coherence of the generations, I wanted to see if I could add punctuation to the output. Because if it could have punctuation, then it could start a new sentence by itself, maybe.
 
 So using the same 4mb of text data, and learning only common Fib intervals (beginning at 2) for punctuation placement, I 'trained' a new 'model', which came out at 30mb.
 
