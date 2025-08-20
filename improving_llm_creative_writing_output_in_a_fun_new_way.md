@@ -1,4 +1,4 @@
-# Improving LLM Creative Writing Output by up to 43.63% using Fibonacci Embeddings
+# A Small Experiment in Improving LLM Creative Writing Using Fibonacci Word Embeddings
 
 I took a small corpus of literary fiction (~700k words) and created a model of which words are most likely to appear at *Fibonacci intervals* to each other — not adjacent, but at specific distances apart.
 
