@@ -12,7 +12,7 @@ The output of the script was a 100mb pkg model.
 
 >Update 22nd August '25: I used the same model in a small data study to, seemingly, [statistically quite drastically increase quality of output](https://github.com/henrygabriels/FMLLM/blob/main/improving_llm_creative_writing_output_in_a_fun_new_way.md) from an LLM on 'creative writing' tasks.
 
-## The Origin Story
+## Where The Idea Came From
 
 The idea came from an exercise I used to do all the time. I'm a novelist (hence not knowing lots of the right words for maths / data stuff), and when I was learning to write novels, I used to make big spreadsheets of where each important word (for example "green" in Gatsby) happened, and how it recurred, and how that happened in relation to other important words in the text.
 
