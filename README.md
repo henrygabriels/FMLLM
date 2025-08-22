@@ -106,11 +106,13 @@ The BERT model for punctuation reconstruction is 1gb, though, so maybe it would 
 
 ## Final Thoughts
 
-I'm not saying there is a hidden golden ratio logic to (the English) language. And I'm definitely not claiming this is a new kind of Fibonacci machine learning language model (FML LM?).
+I'm not saying there is a hidden golden ratio logic to (the English) language. And I'm definitely not claiming this is a new kind of Fibonacci machine learning language model (FML LM?). (And, following further feedback, I do want to make it clear that the repo title is a pun, not a claim.)
 
 But, from what I understand about LLMs, more input data will always mean more bloat, more training time, etc, because you're looking at words that are right next to each other. Instinctively, language doesn't work like that, the same way music and painting and architecture do not function on intervals of one.
 
 The intervals and their weighting is really important to my writing work, which is how I make a living, so I apologise for not just publishing the code. That feels shitty of me. I don't want it to look like a black box filled with snake oil. It's just that for a writer, you don't really have much more than your voice.
+
+Update 22nd August 25: I have just published some of the code, so you can try it yourself. Use good text data (classic literature).
 
 I will, though, happily share it with anyone genuinely interested, in a reasonable way - hit me up. If this is worth pursuing, I would love to do that. Because I'm very much at the point where it's beyond me, now.
 
