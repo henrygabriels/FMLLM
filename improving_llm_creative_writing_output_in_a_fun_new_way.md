@@ -22,8 +22,9 @@ In this format:
 
 I used **Mistral’s Nemo** to generate the stories (cheap + strong at roleplay on OpenRouter) and **Gemini Flash 2.0** to assess them (cheap + anecdotal sense that it’s “tough” in evaluation).
 
-I generated **300 stories** (100 for each topic, with and without appended words, plus a control group).  
-It’s a small dataset; I’m extremely broke.
+I generated **300 stories** (100 for each topic, one with 50 appended Fib words, one with 50 random words from the corpus, plus a control group with no words appended to the prompt).  
+
+It’s a small dataset; I'm not quite a starving artist, but it's a close-run thing. I would love to be able to take this further.
 
 The judging criteria were adapted with slight amendments from [EQ Bench’s creative writing benchmarks](https://eqbench.com/about.html#creative-writing-v3).  
 
