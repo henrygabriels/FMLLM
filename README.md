@@ -10,7 +10,7 @@ I got Claude to write a script that looked for the words within that 4mb of text
 
 The output of the script was a 100mb pkg model.
 
->Update 22nd August '25: I used the same model in a small data study to, seemingly, statistically quite drastically increase quality of output [statistically quite drastically increase quality of output](https://github.com/henrygabriels/FMLLM/blob/main/improving_llm_creative_writing_output_in_a_fun_new_way.md) from an LLM on 'creative writing' tasks.
+>Update 22nd August '25: I used the same model in a small data study to, seemingly, [statistically quite drastically increase quality of output](https://github.com/henrygabriels/FMLLM/blob/main/improving_llm_creative_writing_output_in_a_fun_new_way.md) from an LLM on 'creative writing' tasks.
 
 ## The Origin Story
 
