@@ -14,15 +14,17 @@ The output of the script was a 100mb pkg model.
 
 ## Where The Idea Came From
 
-The idea came from an exercise I used to do all the time. I'm a novelist (hence not knowing lots of the right words for maths / data stuff), and when I was learning to write novels, I used to make big spreadsheets of where each important word (for example "green" in Gatsby) happened, and how it recurred, and how that happened in relation to other important words in the text.
+I'm a novelist. When I was learning to write novels, I used to make big spreadsheets of where each important word (for example "green" in Gatsby) happened, how it recurred, and how that happened in relation to other important words in the text.
 
-When you plotted that out, it used to often make rough - but clear - spiral shapes. I was thinking about that exercise, and whether I could use a computer to see if there were meaningful positional relationships between words that occurred at certain intervals.
+When you plotted that out, it used to often make rough - but clear - spiral shapes. 
+
+I was thinking about that exercise, and whether I could use code to see if there were meaningful positional relationships between words that occurred at certain intervals.
 
 ## Constraints / Brief Method
 
 One of the rules of the exercise was: no words that occur directly before or after the input word, unless they appear at a Fib interval to one of the other input words.
 
-Finally, I added some manual weighting to particular intervals that I have often seen as being important.
+I added some manual weighting to particular Fib intervals that I believe are important.
 
 ## Word Generation Example
 
