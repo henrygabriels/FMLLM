@@ -1,26 +1,35 @@
 # A Small Experiment in Improving LLM Creative Writing Using Fibonacci Word Embeddings
 
-I took a small corpus of literary fiction (~700k words) and created a model of which words are most likely to appear at *Fibonacci intervals* to each other — not adjacent, but at specific distances apart.
+I took a tiny corpus of literary fiction (~700k words, 4mb) and created a model of which words are most likely to appear at *Fibonacci intervals* to each other - not adjacent, but at specific distances apart.
 
 From this, I could take a prompt and generate 50 words that may or may not be linked to the prompt.  
 I appended these to prompts like:
 
+
+```
 - “Write a story about a dog”  
 - “Write a story about love”  
-- “Write a story about grief”  
+- “Write a story about grief”
+```  
 
 In this format:
 
+
+```
 [You may wish to use the following words in your story, either as inspiration or for direct usage. The choice is yours: {fib_words}]
+```
 
 
 I used **Mistral’s Nemo** to generate the stories (cheap + strong at roleplay on OpenRouter) and **Gemini Flash 2.0** to assess them (cheap + anecdotal sense that it’s “tough” in evaluation).
 
-I generated **300 stories** (100 for each topic, with and without appended words).  
-It’s a small dataset; I’m broke.  
+I generated **300 stories** (100 for each topic, with and without appended words, plus a control group).  
+It’s a small dataset; I’m extremely broke.
 
-The judging criteria were adapted from [EQ Bench’s creative writing benchmarks](https://eqbench.com/about.html#creative-writing-v3).  
+The judging criteria were adapted with slight amendments from [EQ Bench’s creative writing benchmarks](https://eqbench.com/about.html#creative-writing-v3).  
+
 Results were surprising: significant improvements with Fibonacci embeddings.
+
+***
 
 > **Note**: I don’t think AIs “know” what good writing is. Using them to benchmark creative writing is absurd. But still, the comparison is useful.
 
@@ -28,19 +37,20 @@ Results were surprising: significant improvements with Fibonacci embeddings.
 
 ## Results
 
-| Benchmark                 | No extra words | Random words (Δ) | Fibonacci words (Δ) |
+| Benchmark                 | Average Gemini Rating out of 10 of Story Prompted With No Appended Words | Average Gemini Rating out of 10 of Story Prompted With Random Appended Words | Average Gemini Rating out of 10 of Story Prompted With Fibonacci Appended Words |
 |----------------------------|----------------|------------------|---------------------|
-| Authenticity of character  | 2.96           | 3.14 (+6.13%)    | 3.64 (+23.19%)      |
-| Originality of voice       | 2.37           | 2.99 (+26.16%)   | 3.40 (+43.63%)      |
-| Quality of prose           | 4.32           | 4.48 (+3.82%)    | 4.77 (+10.36%)      |
-| Artistic coherence         | 5.06           | 4.79 (−5.18%)    | 4.72 (−6.78%)       |
-| Quality of world created   | 4.13           | 4.46 (+8.10%)    | 5.08 (+23.02%)      |
-| **Overall Quality**        | 3.44           | 3.73 (+8.35%)    | 4.07 (+18.33%)      |
+| Authenticity of character  | 2.96           | 3.14 **(+6.13%)**    | 3.64 **(+23.19%)**      |
+| Originality of voice       | 2.37           | 2.99 **(+26.16%)**   | 3.40 **(+43.63%)**      |
+| Quality of prose           | 4.32           | 4.48 **(+3.82%)**    | 4.77 **(+10.36%)**      |
+| Artistic coherence         | 5.06           | 4.79 **(−5.18%)**    | 4.72 **(−6.78%)**       |
+| Quality of world created   | 4.13           | 4.46 **(+8.10%)**    | 5.08 **(+23.02%)**      |
+| **Overall Quality**        | 3.44           | 3.73 **(+8.35%)**    | 4.07 **(+18.33%)**      |
 
 ---
 
-## Assessment Prompt
+### Assessment Prompt
 
+```
 Please carefully read the following story and provide a detailed, harsh if necessary, honest analysis of its literary merits, followed by numerical ratings. Use all your knowledge of literary fiction to make this assessment. Be a nuanced and artistic critic. See merits and flaws with equal honesty.
 
 Story:
@@ -55,16 +65,21 @@ Quality of prose: [score/10]
 Artistic coherence in plotting: [score/10]
 The world created by the prose: [score/10]
 Overall literary quality: [score/10]
+```
 
 ---
 
 ## Story Samples
 
-Here are some side-by-side examples (all from the “grief” prompt).  
-I haven’t cherry-picked; these just stood out.
+Here are some side-by-side examples, all from the same batch of 3 types of “grief” prompts.  
+I have not cherry-picked these (any less than a human trying to choose three at random can).
+
+*I strongly encourage you to read the Fib example against the 'no appended words' example.*
 
 <details>
-<summary>The Echoes of Absence (No appended words)</summary>
+<summary><strong>The Echoes of Absence (No appended words)</strong></summary>
+
+***
 
 In the quiet, unassuming town of Mossgrove, where life flowed as steady and sure as the river that ran alongside it, the residents knew one another well. They knew the rhythm of each other's lives, the cadence of their routines, and the familiar patterns that wove the tapestry of their days. It was here that Margaret and Thomas had lived for decades, their love story as legendary as the town itself.
 
@@ -94,10 +109,14 @@ The town of Mossgrove watched Margaret's journey with quiet admiration. They saw
 
 Grief, she learned, was not a destination, but a journey. A journey she would take one step at a time, one day at a time. And she was determined to do so with her heart open, with her spirit undaunted, and with the love of her life forever by her side. For even in his absence, Thomas was still very much a part of her story. And she would make sure that their love story, their legend, would live on, echoing through the years like a melody that would never fade away.
 
+***
+
 </details>
 
 <details>
-<summary>The Lighthouse Keeper (Random words appended)</summary>
+<summary><strong>The Lighthouse Keeper (Random words appended)</strong></summary>
+
+***
 
 In the quiet, windswept town of Harborshore, perched on a cliff overlooking the stormy sea, stood an ancient lighthouse. The lighthouse was tended by the Pemberton family for generations, a duty they took pride in, a duty that had become a part of their identity. The lighthouse was more than a beacon in the night; it was a symbol of their resilience, a testament to their unyielding spirit.
 
@@ -125,10 +144,14 @@ Jim Pemberton was buried with honors, his name etched on the lighthouse wall, a 
 
 And the lighthouse stood, a beacon in the night, a silent guardian against the unpredictable fury of the sea. It was no longer just a symbol of the Pemberton family's resilience, of their unyielding spirit. It was a symbol of Jim's sacrifice, a testament to his love for the town, for the people. It was a monument to the power of duty, of love, of selflessness. And it would stand, tall and proud, against the storm, forever.
 
+***
+
 </details>
 
 <details>
-<summary>The Unending Reel (Fibonacci words appended)</summary> 
+<summary><strong>The Unending Reel (Fibonacci words appended)</strong></summary> 
+
+***
 
 In the grimy corners of the Cineplex Siberia, where the worn-out seats bore the weight of forgotten stories, Martin found himself a volunteer projectionist. His grief, a monster he couldn't dance around, had dragged him here, to this place that smelled of old popcorn and unsound dreams. The Cineplex was his therapist, the flickering reels his therapy, and the empty halls, his comfort in the silence.
 
@@ -150,29 +173,97 @@ He took the reel from her. ""How about you help me with the next show?"" he sugg
 
 And so, Martin and the girl started their dance with grief, one reel at a time, in the silent halls of the Cineplex Siberia. The monster that was grief was still there, but it was no longer a terrifying presence. It was a part of them, a part they could live with, a part they could share. And in the dark of the Cineplex, under the soft glow of the movie screen, they found a way to consume their grief, one frame at a time, forever.
 
+***
+
 </details>
----
+
+<details>
+<summary><strong>A little personal, subjective note on the three stories</strong></summary>
+
+***
+
+I mean, god damn. The 'control' story is exactly as you'd expect: slop. The 'random words' is slightly less cliched slop.
+
+The 'fib words' example has some genuinely beautiful aspects:
+
+1. The setting of the 'CINEPLEX SIBERIA'. Gorgeous words, and like Wes Anderson doing Anna Kavan.
+2. "The Grief Film Festival" feels like an early Don Delillo bit.
+3. The description of films as "unsound dreams". I would be proud of this line had I written it (and I have an O. Henry). Cinema is often described as "dream", and "unsound" works both ways. An unsound sleep, and dreams with noise - which is what cinema is.
+4. It *slightly* uses a couple of "frame narratives" with the film-within-the story, for example "Herdeal". A "frame narrative" is when a short story tells another story within it. This is probably a coincidence. But it's also a very subtle, commonly-used technique in what is considered the canon of great short stories. Pretty much every Carver story does this.
+5. The characters are drawn very well, but not showily. "A young girl with a gila monster backpack" is visceral, understated, and completely *there* as a character image, as is "Martinez, an old man with a turtleneck and a knowing look". It's as if the Fib words turn the temperature of the LLM up, but in a directed way.
+
+Edited for removal of 'slop technique' (the closing para, the tendency to explain metaphors that need no explanation, etc), the third story could be a competent short story, in my view. 
+
+It contains enough elements to make a decent short story. The others, I don't know. I think they would require more work.
+
+That's just my opinion. And these things are subjective, which means I'm right.
+
+***
+
+</details>
 
 ## How Easy Would This Be to Automate?
 
 The process is extremely lightweight. A company with existing infrastructure could implement this in a few steps:
 
 1. **Precompute embeddings**  
-   - Take any large text corpus (fiction, user-generated text, etc.).  
+   - Take a text corpus (I don't know how well this would work if you didn't choose well-written literary fiction).  
    - Build a lookup table of words likely to co-occur at Fibonacci intervals.  
-   - This is a one-time cost, not computationally heavy.  
+   - This is a one-time cost, not computationally heavy. I run this in seconds on my Macbook Pro M2.
 
 2. **Augment prompts**  
    - When a user sends a creative-writing request, fetch ~50 Fibonacci-related words from the lookup table.  
    - Append them in the “optional words” format.  
 
 3. **Model-agnostic**  
-   - Works with any text generation model — no fine-tuning needed.  
-   - Zero modification of the base model.  
+   - Works with any text generation model - no fine-tuning needed. 
+   - Plug and play, baby.
 
 4. **Assessment pipeline**  
    - Companies could use LLM-based judges, human raters, or hybrid methods.  
-   - Scaling up would give far more reliable benchmarks than my tiny dataset.  
+   - Scaling up would give far more reliable benchmarks than my tiny dataset.
+   - Because I'm a broke-ass writer, not a company.
 
-Essentially, the whole pipeline is a **cheap prompt add-on**, not a major research lift.  
-A company like Anthropic, OpenAI, or even a fanfiction site could run this at scale without changing their models at all. I find it useful :-)
+Essentially, the whole pipeline is potentially a **cheap prompt add-on**, not a major research lift. I might have already done the heavy lifting of the research, if the results are reproducable.
+
+Anthropic, OpenAI, or any / all of the *We Promise Our AI Creative Writing Is The Best LLCs* could run this at scale without changing their models at all. I find it useful in my work. :-)
+
+***
+
+> **Note**: I have secret custom weighting for specific intervals that I believe are important, which is based on my research. These weightings probably improve results, but I didn't use them here, because I wanted to share something as openly as possible. See the other post in the repo: 
+
+[FMLLM: Fuck my life, could this be a Fibonacci Machine Learning Language Model? Please help me work it out.](https://github.com/henrygabriels/FMLLM/blob/main/README.md).
+
+***
+
+## Should they automate it?
+
+I think if the results could be reproduced at a larger scale, with human reviewers, then yes, for certain tasks. But it probably isn't going to help coding benchmarks!
+
+## Errata
+
+*Cross-disciplinary* is a word, I think, with bad connotations. 
+
+It implies, to me, niche academic work that at once of little financial benefit to corporations, and little artistic benefit to audiences. 
+
+Other people probably (rightly) feel differently. I did not spend much time in academia. 
+
+But LLMs *are* cross-disciplinary. If you have spent your whole life thinking about language, and how to make art with it, it's a very beautiful time to be alive. 
+
+Genuine innovation in 'art made of words' is historically rare. 
+
+It is the 20s. Enough with the anti-tech sentimenent in the arts. I think it is time for us to to be Modernists again. 
+
+As LLMs move from the early-adopter phase (Claude Code as King) to widespread consumer use (whether that is new forms of art & entertainment, or inducing schizophrenia in vulnerable people, or, most likely, both) I believe that the *language* people can help the *model* people build on this genuinely incredibly beautiful thing they've started.
+
+The purpose of this repo / blog / whatever is to just throw the fun little experiments I'm doing out into the world, and see what comes back. 
+
+I love language, and I love stories, and most of all I love audiences. 
+
+The whole point of being alive, for me, is to help there be better stories in the world. 
+
+Since we're being pretentious, a movie I love says the same thing using different words: 
+
+>What is the meaning of life?
+>
+>To become immortal, and then die.
