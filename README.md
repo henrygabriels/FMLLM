@@ -10,11 +10,15 @@ I got Claude to write a script that looked for the words within that 4mb of text
 
 The output of the script was a 100mb pkg model.
 
+>Update 22nd August '25: I used the same model in a small data study to, seemingly, statistically quite drastically increase quality of output from an LLM on 'creative writing' tasks.
+
 ## The Origin Story
 
 The idea came from an exercise I used to do all the time. I'm a novelist (hence not knowing lots of the right words for maths / data stuff), and when I was learning to write novels, I used to make big spreadsheets of where each important word (for example "green" in Gatsby) happened, and how it recurred, and how that happened in relation to other important words in the text.
 
 When you plotted that out, it used to often make rough - but clear - spiral shapes. I was thinking about that exercise, and whether I could use a computer to see if there were meaningful positional relationships between words that occurred at certain intervals.
+
+## Constraints / Brief Method
 
 One of the rules of the exercise was: no words that occur directly before or after the input word, unless they appear at a Fib interval to one of the other input words.
 
