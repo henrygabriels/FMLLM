@@ -10,7 +10,7 @@ I got Claude to write a script that looked for the words within that 4mb of text
 
 The output of the script was a 100mb pkg model.
 
->Update 22nd August '25: I used the same model in a small data study to, seemingly, statistically quite drastically increase quality of output from an LLM on 'creative writing' tasks.
+>Update 22nd August '25: I used the same model in a small data study to, seemingly, statistically quite drastically increase quality of output [statistically quite drastically increase quality of output](https://eqbench.com/about.html#creative-writing-v3) from an LLM on 'creative writing' tasks.
 
 ## The Origin Story
 
